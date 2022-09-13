@@ -3,6 +3,8 @@
 
 Sistema para geração e envio de boleto automaticamente através do banco inter para conta PJ (Não funciona para MEI)
 
+# Versão Free
+
 - Cadastro de clientes
 - Cadastro de Serviços
 - Atrelar serviços a clientes
@@ -13,6 +15,29 @@ Sistema para geração e envio de boleto automaticamente através do banco inter
 - Envio de boleto avulso via E-mail
 - Envio de boleto avulso via WhatsApp
 - Consulta de saldo na conta do Inter
+
+
+# Versão Pro
+- Cadastro de clientes
+- Cadastro de Serviços
+- Atrelar serviços a clientes
+- Cadastro de feriados
+- Geração automática de boleto, identifica feriados e finais de semana, adianta ou atrasa o vencimento do boleto (1 ~ 2 dias)
+- Geração de boleto avulso
+- Envio automático de boleto via E-mail
+- Envio automático de boleto via WhatsApp
+- Envio de boleto avulso via E-mail
+- Envio de boleto avulso via WhatsApp
+- Consulta de saldo na conta do Inter
+- Saldo em aberto de boletos não pagos no mês
+- Saldo de boletos vencidos no mês
+- E-mail de lembrete de vencimento de fatura
+- Cancelamento de boletos em massa
+- Baixa automática de boleto
+- Alerta no WhatsApp sobre baixas automática no boleto
+- Integração com o Bugsnag (Acomanhar erros na aplicação)
+
+
 ## Requerimentos
 
 O projeto não irá funcionar sem um banco de dados em memória, recomendo o Redis
@@ -95,7 +120,10 @@ Para gerar o boleto automaticamente, rode o comando
 php artisan ln:auto_generate_boleto
 ```
 
+## Para saber como enviar através do WhatsApp, consulte a sessão "créditos"
+
 O sistema irá procurar clientes com o status "ativo" e com serviços atrelados, irá gerar o boleto, enviar por e-mail e se o WhatsApp estiver configurado, também será enviado pelo WhatsApp.
+
 
 ### Logs
 Você pode conferir os logs da geração do boleto e do envio na pasta /storage/logs/gerar-boleto/boleto-ano-mes-dia.log
@@ -131,11 +159,11 @@ Você pode conferir os logs da geração do boleto e do envio na pasta /storage/
 
 ### Envio Via WhatsApp Anexo
 ![Envio anexo](https://i.imgur.com/oZzvVtl.png)
-## Créditos
 
-- [Template E-mail - ckissi](https://github.com/ckissi/responsive-html-email-templates)
-- [wppconnect-team](https://github.com/wppconnect-team)
-- [ColorlibHQ](https://github.com/ColorlibHQ/AdminLTE)
+## Créditos
+- [Template para envio de e-mails - ckissi](https://github.com/ckissi/responsive-html-email-templates)
+- [Lib envio de mensagem no WhatsApp - WPPCONNECT-TEAM](https://github.com/wppconnect-team)
+- [Painel administrativo, template - ColorlibHQ](https://github.com/ColorlibHQ/AdminLTE)
 
 ## Este projeto é útil para você? Aceito um café ☕
 
