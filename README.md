@@ -17,7 +17,7 @@ Sistema para geração e envio de boleto automaticamente através do banco inter
 - Consulta de saldo na conta do Inter
 
 
-# Versão Pro
+## Versão Pro
 - Cadastro de clientes
 - Cadastro de Serviços
 - Atrelar serviços a clientes
@@ -160,6 +160,11 @@ Você pode conferir os logs da geração do boleto e do envio na pasta /storage/
 ### Envio Via WhatsApp Anexo
 ![Envio anexo](https://i.imgur.com/oZzvVtl.png)
 
+
+## Suporte pago
+### Precisa de ajuda para instalar e configurar? Estou disponível para ajudar! Orçamento por hora e demanda.
+
+
 ## Créditos
 - [Template para envio de e-mails - ckissi](https://github.com/ckissi/responsive-html-email-templates)
 - [Lib envio de mensagem no WhatsApp - WPPCONNECT-TEAM](https://github.com/wppconnect-team)
@@ -168,6 +173,9 @@ Você pode conferir os logs da geração do boleto e do envio na pasta /storage/
 ## Este projeto é útil para você? Aceito um café ☕
 
 Este projeto te auxiliou de alguma forma? Então, que tal me pagar um café? ☕☕
+## Chave pix: 9b9835e9-7161-4f07-baba-d4a0e7c8430b
+
+<img src="https://i.imgur.com/NxyfW7K.jpg" height="400">
 ## License
 
 [Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)

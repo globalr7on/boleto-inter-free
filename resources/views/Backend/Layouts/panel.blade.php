@@ -179,8 +179,31 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Main content -->
-    <section class="content mt-n3">
+    <section class="content">
       <div class="container-fluid">
+          <div class="modal fade" id="pay-coffe" tabindex="-1" role="dialog" aria-labelledby="pay-coffeTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title d-block mx-auto">☕☕ Esse projeto foi útil para você? Aceito um café ☕☕</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                      <h5>Chave aleatória: <strong>9b9835e9-7161-4f07-baba-d4a0e7c8430b</strong></h5>
+                      <img src="https://i.imgur.com/NxyfW7K.jpg" height="400">
+                        <input type="hidden" value="9b9835e9-7161-4f07-baba-d4a0e7c8430b">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <a target="_blank" href="https://github.com/leonardop21/boleto-inter-free#versão-pro" class="btn btn-success" rel="noopener">Conheça a versão pro</a>
+                  <button type="button" class="btn btn-danger" onclick="noCoffee(1)">Fechar e não mostrar mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
         @yield('content')
       </div><!--/. container-fluid -->
     </section>
@@ -274,6 +297,27 @@ $(function () {
                   break;
           }
       @endif
+
+
+      var getCoffee = localStorage.getItem("no-coffe");
+      var getElementId = document.getElementById("pay-coffe");
+
+      function noCoffee(arg){
+        if(!getCoffee){
+          $("#pay-coffe").modal('show')
+        }
+
+        if(arg){
+          $("#pay-coffe").modal('hide')
+          localStorage.setItem("no-coffe", 1);
+          location.reload();
+        }
+      }
+      if(!getCoffee){
+        setTimeout(function () {
+          noCoffee();
+      }, 7000);
+    }
     </script>
 @yield('js')
 </body>
