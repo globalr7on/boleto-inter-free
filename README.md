@@ -120,6 +120,19 @@ Para gerar o boleto automaticamente, rode o comando
 php artisan ln:auto_generate_boleto
 ```
 
+## Remover boletos e diretórios antigos
+Para remover todos o boletos e um diretório antigo rode o comando abaixo, passando o ano e mês
+
+```
+php artisan ln:auto_generate_boleto 2022/09
+```
+
+Ou deixe o argumento vazio, para remover do mês passado.
+
+```
+php artisan ln:auto_generate_boleto
+```
+
 ## Para saber como enviar através do WhatsApp, consulte a sessão "créditos"
 
 O sistema irá procurar clientes com o status "ativo" e com serviços atrelados, irá gerar o boleto, enviar por e-mail e se o WhatsApp estiver configurado, também será enviado pelo WhatsApp.
